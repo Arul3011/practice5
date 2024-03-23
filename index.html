@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: hsl(216, 12%, 8%) ;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .cointainer{
+      width: 380px;
+      min-width: 380px;
+      height: auto;
+      border-radius: 25px;
+      /* background:  */
+      background-color:hsl(213, 19%, 18%);
+    }
+    .cointainer img{
+      padding: 15px;
+      background-color:  hsl(213, 19%, 26%);
+      border-radius: 50%;
+      margin-left: 30px ;
+      margin-top:30px;
+      /* box-shadow: 0px 0px 70px 1px black; */
+
+    }
+    .buttons{
+      padding: 0px 20px;
+      margin-bottom: 20px;
+    }
+    .buttons button{
+      background-color: hsl(213, 19%, 27%);
+      border-style: none;
+      color: hsl(216, 12%, 54%);
+        border-radius: 50%;
+        margin: 7px;
+        width: 50px;
+        height: 50px;
+        font-weight: 900;
+       
+        
+    }
+    p{
+      padding: 0px 30px;  
+      
+      color: hsl(216, 12%, 54%);
+      font-size: 15px;
+    }
+    h1{
+      padding-left: 30px;
+    }
+    .subBTN{
+    
+      margin-bottom: 30px;
+      width: 85%;
+      padding: 15px;
+      border-radius: 30px;
+      background-color: hsl(25, 97%, 53%);
+      font-weight:800;
+      color: white;
+      border-style: none;
+    }
+    .buttons button:hover{
+      cursor: pointer;
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+    }
+    .subBTN:hover{
+      cursor: pointer;
+      background-color: white;
+      color: hsl(25, 97%, 53%) ;
+    }
+    .thanks{
+      /* display: none; */
+      width: 30px;
+      min-width: 380px;
+      height: auto;
+      border-radius: 25px;
+      background-color: hsl(213, 19%, 18%);
+    }
+    .thanks p{
+      padding: 0px 25px;
+    }
+    .thanks img{
+      margin-top: 40px;
+    }
+    .thanks p{
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+    #reviue{
+      color:  hsl(25, 97%, 53%);
+      background-color: hsl(213, 19%, 25%);
+      max-width: fit-content;
+      border-radius: 30px;
+      padding: 5px 15px;
+      margin: 0px 0px;
+      margin-top: 19px;
+    }
+    @media (max-width:425px){
+      .cointainer{
+        margin: auto 20px;
+    
+        min-width:auto;
+      }
+      .buttons button{
+        margin: 4px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cointainer" id="cointainer" >
+    <img src="icon-star.svg" alt="">
+    <h1>How did we do?</h3>
+      <p> Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+        <center>
+        <div class="buttons">
+          <button class="bt">1</button>
+          <button class="bt">2</button>
+          <button class="bt">3</button>
+          <button class="bt">4</button>
+          <button class="bt">5</button>
+        </div>
+       <button class="subBTN" onclick="submit(choise)">SUBMIT</button></center>
+       
+  </div>
+
+
+  <div class="thanks" id="thankpage" hidden>
+      <center><img src="illustration-thank-you.svg" alt="">
+        <p id="reviue"></p>
+      <h2>Thank you!</h2>
+      <p> We appreciate you taking the time to give a rating. If you ever need more support, 
+        don't hesitate to get in touch!</p>
+    </center>
+  </div>
+ 
+  <script src="index.js"></script>
+</body>
+</html>
